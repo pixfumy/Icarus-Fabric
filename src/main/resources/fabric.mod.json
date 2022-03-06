@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "icarus",
+  "version": "${version}",
+  "name": "Icarus",
+  "description": "Gives the player an unbreakable elytra and 64 fireworks upon world load.",
+  "authors": [
+    "Pixfumy"
+  ],
+  "contact": {
+    "homepage": "https://github.com/pixfumy",
+    "sources": "https://github.com/pixfumy/Legacy-Elytras"
+  },
+  "license": "CC0-1.0",
+  "icon": "assets/icarus/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+    ]
+  },
+  "mixins": [
+    "icarus.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.12.0",
+    "minecraft": "1.8.9",
+    "legacyelytras": "*"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
