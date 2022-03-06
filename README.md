@@ -1,2 +1,2 @@
 # Icarus-Fabric
-A 1.7 and 1.8 fabric mod used for Icarus.
+A 1.7 and 1.8 fabric mod that gives the player an unbreakable elytra and a stack of fireworks upon worldload. This mod requires the (https://github.com/pixfumy/Legacy-Elytras)[Legacy Elytras] mod.
