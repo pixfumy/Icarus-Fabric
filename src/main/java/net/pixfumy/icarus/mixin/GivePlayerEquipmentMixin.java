@@ -25,7 +25,7 @@ public class GivePlayerEquipmentMixin {
 	@Inject(method = "onEntitySpawned", at = @At("HEAD"))
 	private void givePlayerEquipment(Entity entity, CallbackInfo ci) {
 		if (entity instanceof PlayerEntity && ((IPlayerEntity)entity).getTimePlayed() < 10) {
-			ItemStack elytra = new ItemStack(Item.getFromId("elytra"));
+			ItemStack elytra = new ItemStack(Item.byRawId(9999));
 			CompoundTag unbreakable = new CompoundTag();
 			unbreakable.putBoolean("Unbreakable", true);
 			elytra.setTag(unbreakable);
