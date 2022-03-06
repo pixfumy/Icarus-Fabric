@@ -23,8 +23,7 @@
   ],
   "depends": {
     "fabricloader": ">=0.12.0",
-    "minecraft": "1.8.9",
-    "legacyelytras": "*"
+    "minecraft": "1.8"
   },
   "suggests": {
     "another-mod": "*"
