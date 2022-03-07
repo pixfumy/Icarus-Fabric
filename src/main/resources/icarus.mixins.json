@@ -4,10 +4,10 @@
   "package": "net.pixfumy.icarus.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "GivePlayerEquipmentMixin"
   ],
   "client": [
-    "GivePlayerEquipmentMixin",
-    "PlayerEntityMixin"
+
   ],
   "injectors": {
     "defaultRequire": 1
