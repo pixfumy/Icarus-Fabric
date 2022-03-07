@@ -8,7 +8,8 @@ import net.minecraft.item.Items;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.util.profiler.Profiler;
 import net.minecraft.world.World;
-import net.pixfumy.icarus.IPlayerEntity;
+import net.minecraft.world.dimension.Dimension;
+import net.minecraft.world.level.LevelProperties;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -22,9 +23,14 @@ public class GivePlayerEquipmentMixin {
 
 	@Shadow @Final public boolean isClient;
 
+	@Shadow @Final public Dimension dimension;
+
+	@Shadow protected LevelProperties levelProperties;
+
 	@Inject(method = "onEntitySpawned", at = @At("HEAD"))
 	private void givePlayerEquipment(Entity entity, CallbackInfo ci) {
-		if (entity instanceof PlayerEntity && ((IPlayerEntity)entity).getTimePlayed() < 10) {
+		if (entity instanceof PlayerEntity && this.dimension.getType() == 0
+				&& this.levelProperties.getTime() < 20) {
 			ItemStack elytra = new ItemStack(Item.getFromId("elytra"));
 			CompoundTag unbreakable = new CompoundTag();
 			unbreakable.putBoolean("Unbreakable", true);

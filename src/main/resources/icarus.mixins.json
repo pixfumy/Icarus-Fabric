@@ -6,8 +6,7 @@
   "mixins": [
   ],
   "client": [
-    "GivePlayerEquipmentMixin",
-    "PlayerEntityMixin"
+    "GivePlayerEquipmentMixin"
   ],
   "injectors": {
     "defaultRequire": 1
